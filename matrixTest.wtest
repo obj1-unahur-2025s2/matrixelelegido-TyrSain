@@ -1,9 +1,16 @@
+import matrix.*
 
 
-describe "group of tests " {
+describe "nave de la matrix" {
 
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "se suben todos a la nave y la nave acelera" {
+    nave.subirPasajero([neo, morfeo, trinity])
+    nave.naveAcelera()
+
+    assert.equals(10, neo.vitalidad())
+    assert.equals(7, morfeo.vitalidad())
+    assert.equals(0, trinity.vitalidad())
   }
 
 }
+
