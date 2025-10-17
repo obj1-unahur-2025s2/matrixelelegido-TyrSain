@@ -75,7 +75,11 @@ object nave {
     }
 
     method naveEquilibrada() {
-        return 
+        const vitalidades = pasajeros.map({pasajeros => pasajeros.vitalidad()})
+        const vitalidadMaxima = vitalidades.max()
+        const vitalidadMinima = vitalidades.min()
+        
+        return vitalidadMaxima <= 2 * vitalidadMinima
     }
 
     method naveChoca() {
